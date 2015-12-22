@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
   <edmx:DataServices>
     <Schema Namespace="microsoft.graph" xmlns="http://docs.oasis-open.org/odata/ns/edm">
@@ -963,7 +964,18 @@
       </ComplexType>
       <EntityType Name="eventMessage" BaseType="microsoft.graph.message">
         <Property Name="meetingMessageType" Type="microsoft.graph.meetingMessageType" />
+        <Property Name="startDateTime" Type="microsoft.graph.dateTimeTimeZone" />
+        <Property Name="endDateTime" Type="microsoft.graph.dateTimeTimeZone" />
+        <Property Name="location" Type="microsoft.graph.location" />
+        <Property Name="type" Type="microsoft.graph.eventType" />
+        <Property Name="recurrence" Type="microsoft.graph.patternedRecurrence" />
+        <Property Name="isOutOfDate" Type="Edm.Boolean" />
         <NavigationProperty Name="event" Type="microsoft.graph.event" Nullable="false" ContainsTarget="true" />
+      </EntityType>
+      <EntityType Name="eventMessageRequest" BaseType="microsoft.graph.eventMessage">
+        <Property Name="previousLocation" Type="microsoft.graph.location" />
+        <Property Name="previousStartDateTime" Type="microsoft.graph.dateTimeTimeZone" />
+        <Property Name="previousEndDateTime" Type="microsoft.graph.dateTimeTimeZone" />
       </EntityType>
       <EntityType Name="referenceAttachment" BaseType="microsoft.graph.attachment" />
       <EntityType Name="openTypeExtension" BaseType="microsoft.graph.extension" OpenType="true">
