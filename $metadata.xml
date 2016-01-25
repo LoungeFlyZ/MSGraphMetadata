@@ -1394,28 +1394,28 @@
         <Property Name="notificationUrl" Type="Edm.String" Nullable="false" Unicode="false" />
         <Property Name="subscriptionExpirationDateTime" Type="Edm.DateTimeOffset" />
       </EntityType>
-      <Action Name="checkMemberGroups" IsBound="true" EntitySetPath="bindingParameter">
+      <Action Name="checkMemberGroups" IsBound="true">
         <Parameter Name="bindingParameter" Type="microsoft.graph.directoryObject" Nullable="false" />
         <Parameter Name="groupIds" Type="Collection(Edm.String)" Nullable="false" Unicode="false" />
         <ReturnType Type="Collection(Edm.String)" Nullable="false" Unicode="false" />
       </Action>
-      <Action Name="getMemberGroups" IsBound="true" EntitySetPath="bindingParameter">
+      <Action Name="getMemberGroups" IsBound="true">
         <Parameter Name="bindingParameter" Type="microsoft.graph.directoryObject" Nullable="false" />
         <Parameter Name="securityEnabledOnly" Type="Edm.Boolean" />
         <ReturnType Type="Collection(Edm.String)" Nullable="false" Unicode="false" />
       </Action>
-      <Action Name="getMemberObjects" IsBound="true" EntitySetPath="bindingParameter">
+      <Action Name="getMemberObjects" IsBound="true">
         <Parameter Name="bindingParameter" Type="microsoft.graph.directoryObject" Nullable="false" />
         <Parameter Name="securityEnabledOnly" Type="Edm.Boolean" />
         <ReturnType Type="Collection(Edm.String)" Nullable="false" Unicode="false" />
       </Action>
-      <Action Name="assignLicense" IsBound="true" EntitySetPath="bindingParameter">
+      <Action Name="assignLicense" IsBound="true">
         <Parameter Name="bindingParameter" Type="microsoft.graph.user" Nullable="false" />
         <Parameter Name="addLicenses" Type="Collection(microsoft.graph.assignedLicense)" Nullable="false" />
         <Parameter Name="removeLicenses" Type="Collection(Edm.Guid)" Nullable="false" />
         <ReturnType Type="microsoft.graph.user" />
       </Action>
-      <Action Name="changePassword" IsBound="true" EntitySetPath="bindingParameter">
+      <Action Name="changePassword" IsBound="true">
         <Parameter Name="bindingParameter" Type="microsoft.graph.user" Nullable="false" />
         <Parameter Name="currentPassword" Type="Edm.String" Unicode="false" />
         <Parameter Name="newPassword" Type="Edm.String" Unicode="false" />
